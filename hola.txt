@@ -1,0 +1,1702 @@
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                              history [-c] [-d offset] [n] or histor>
+ (( expression ))                          if COMMANDS; then COMMANDS; [ elif COM>
+ . filename [arguments]                    jobs [-lnprs] [jobspec ...] or jobs -x>
+ :                                         kill [-s sigspec | -n signum | -sigspe>
+ [ arg... ]                                let arg [arg ...]
+ [[ expression ]]                          local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]            logout [n]
+ bg [job_spec ...]                         mapfile [-d delim] [-n count] [-O orig>
+ bind [-lpsvPSVX] [-m keymap] [-f filena>  popd [-n] [+N | -N]
+ break [n]                                 printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]         pushd [-n] [+N | -N | dir]
+ caller [expr]                             pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...) C>  read [-ers] [-a array] [-d delim] [-i >
+ cd [-L|[-P [-e]] [-@]] [dir]              readarray [-n count] [-O origin] [-s c>
+ command [-pVv] command [arg ...]          readonly [-aAf] [name[=value] ...] or >
+ compgen [-abcdefgjksuv] [-o option] [-A>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [->  select NAME [in WORDS ... ;] do COMMAN>
+ compopt [-o|+o option] [-DE] [name ...>   set [-abefhkmnptuvxBCHP] [-o option-na>
+ continue [n]                              shift [n]
+ coproc [NAME] command [redirections]      shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=val>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                    suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ..>  test [expr]
+ echo [-neE] [arg ...]                     time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name>  times
+ eval [arg ...]                            trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argument>  true
+ exit [n]                                  type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or expo>  typeset [-aAfFgilnrtux] [-p] name[=val>
+ false                                     ulimit [-SHabcdefiklmnpqrstuvxPT] [lim>
+ fc [-e ename] [-lnr] [first] [last] or >  umask [-p] [-S] [mode]
+ fg [job_spec]                             unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS;>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name ()>  variables - Names and meanings of some>
+ getopts optstring name [arg]              wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ..>  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                 { COMMANDS ; }
